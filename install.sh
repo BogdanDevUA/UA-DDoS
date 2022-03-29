@@ -34,11 +34,10 @@ function load() {
 function install() {
   say "${cyan}Installing $2 ..."
   load $1 $2
-}
-
-function installed() {
-  say "${green}$1 installed!"
-  sleep "2"
+  if [[ $3 && $4 && $3=--build ]]; then
+    docker build $2 -t $4
+  fi
+  say "${green}$2 installed!"
 }
 
 cd ..
@@ -60,16 +59,10 @@ cd apps
 
 log $(pip install --upgrade pip)
 
-install opengs uashield
-docker build uashield -t uashield
-installed uashield
-install MHProDev MHDDoS
-docker build MHDDoS -t mhddos
-installed MHDDoS
+install opengs uashield --build uashield
+install MHProDev MHDDoS --build mhddos
 install palahsu DDoS-Ripper
-installed DDoS-Ripper
 install mkdirlove SPAM-EMAIL
-installed SPAM-EMAIL
 
 sleep "2"
 
