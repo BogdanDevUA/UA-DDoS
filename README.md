@@ -96,5 +96,7 @@ load opengs uashield
 ## Чати та канали телеграм по DDoS:
 * <https://t.me/UAcyberfront/9> ![](images/mini_ukraine.svg)
 
+* [**Cyber Hackers UA**](https://t.me/CyberHackersUA)
+
 
 ## Слава Україні! ![](images/mini_ukraine.svg)
