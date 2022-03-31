@@ -6,7 +6,7 @@ datetime() {
 }
 
 function log() {
-  echo "[$(datetime)] $1" >> ./log.txt
+  echo "[$(datetime)\] $1" >> ./log.txt
 }
 
 reset_fore="\x1b[37m"
@@ -28,7 +28,7 @@ function say() {
 }
 
 function load() {
-  log $(git clone https://github.com/$1/$2.git)
+  git clone https://github.com/$1/$2.git
 }
 
 function install() {
@@ -57,7 +57,8 @@ sleep "1"
 mkdir apps
 cd apps
 
-log $(pip install --upgrade pip)
+pip install --upgrade pip
+log "pip updated!"
 
 install opengs uashield --build uashield
 install MHProDev MHDDoS --build mhddos
