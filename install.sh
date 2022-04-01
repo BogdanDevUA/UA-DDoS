@@ -57,8 +57,23 @@ sleep "1"
 mkdir apps
 cd apps
 
-pip install --upgrade pip
-log "pip updated!"
+sudo sudo apt update -y
+if [ ! -f /usr/bin/git ]; then
+  sudo apt install git -y
+fi
+if [ ! -f /usr/bin/python3 ]; then
+  sudo apt install python3 -y
+fi
+if [ ! -f /usr/bin/pip ]; then
+  apt install python3-pip  -y
+fi
+if [ ! -f /usr/bin/wget ]; then
+  apt install wget  -y
+fi
+if [ ! -f /usr/bin/curl ]; then
+  apt install curl  -y
+fi
+pip install --upgrade pip > /dev/null
 
 install opengs uashield --build uashield
 install MHProDev MHDDoS --build mhddos
