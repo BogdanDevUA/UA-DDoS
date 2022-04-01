@@ -1,14 +1,5 @@
 #!/bin/bash
 #!/usr/bin/env bash
-
-datetime() {
-  date "+%Y.%m.%d %H:%M:%S"
-}
-
-function log() {
-  echo "[$(datetime)\] $1" >> ./log.txt
-}
-
 reset_fore="\x1b[37m"
 reset_back="\x1b[49m"
 green="\x1b[32m"
@@ -24,7 +15,6 @@ function say() {
   clear
   echo -e $1$reset_fore
   echo ""
-  log $1
 }
 
 function load() {
@@ -41,10 +31,6 @@ function install() {
 }
 
 cd ..
-rm -rf my_name.txt
-rm -rf log.txt
-
-echo $(uname -a) >> my_name.txt
 
 echo -e "${blue_back}${yellow}+       +$clr"
 echo -e "${yellow} UA-${blue}DDoS $clr"
@@ -57,22 +43,6 @@ sleep "1"
 mkdir apps
 cd apps
 
-sudo sudo apt update -y
-if [ ! -f /usr/bin/git ]; then
-  sudo apt install git -y
-fi
-if [ ! -f /usr/bin/python3 ]; then
-  sudo apt install python3 -y
-fi
-if [ ! -f /usr/bin/pip ]; then
-  apt install python3-pip  -y
-fi
-if [ ! -f /usr/bin/wget ]; then
-  apt install wget  -y
-fi
-if [ ! -f /usr/bin/curl ]; then
-  apt install curl  -y
-fi
 pip install --upgrade pip > /dev/null
 
 install opengs uashield --build uashield
