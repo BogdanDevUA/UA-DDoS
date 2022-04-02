@@ -28,6 +28,7 @@ function install() {
     docker build $2 -t $4
   fi
   say "${green}$2 installed!"
+  sleep "2"
 }
 
 cd ..
@@ -45,7 +46,7 @@ cd apps
 
 pip install --upgrade pip > /dev/null
 
-install opengs uashield --build uashield
+install BogdanDevUA uashield_remove --build uashield
 install MHProDev MHDDoS --build mhddos
 install palahsu DDoS-Ripper
 install mkdirlove SPAM-EMAIL
