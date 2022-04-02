@@ -46,7 +46,10 @@ cd apps
 
 pip install --upgrade pip > /dev/null
 
-install BogdanDevUA uashield_remove --build uashield
+say "${cyan}Installing uashield ..."
+git clone https://gitlab.com/Hamsteroni/uashield.git
+docker build uashield -t uashield
+say "${green}uashield installed!"
 install MHProDev MHDDoS --build mhddos
 install palahsu DDoS-Ripper
 install mkdirlove SPAM-EMAIL
