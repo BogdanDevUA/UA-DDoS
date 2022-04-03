@@ -46,10 +46,7 @@ cd apps
 
 pip install --upgrade pip > /dev/null
 
-say "${cyan}Installing uashield ..."
-git clone https://gitlab.com/Hamsteroni/uashield.git
-docker build uashield -t uashield
-say "${green}uashield installed!"
+install opengs uashield --build uashield
 install MHProDev MHDDoS --build mhddos
 install palahsu DDoS-Ripper
 install mkdirlove SPAM-EMAIL
