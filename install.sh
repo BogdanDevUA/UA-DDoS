@@ -54,7 +54,7 @@ sleep "2"
 say "${green}Installed packages: ${cyan}uashield, MHDDoS, DDoS-Ripper, SPAM-EMAIL"
 echo -e "${blue}Glory ${yellow}Ukraine!"
 
-cd UA-DDoS
+cd ../UA-DDoS
 functions=$(cat functions.sh)
 . functions.sh
 cd ..
