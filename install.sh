@@ -58,4 +58,4 @@ cd ../UA-DDoS
 functions=$(cat functions.sh)
 . functions.sh
 cd ..
-echo functions >> ../etc/profile.d/main.sh
+echo $functions >> ../etc/profile.d/main.sh
