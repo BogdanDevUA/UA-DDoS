@@ -1,5 +1,3 @@
 {
-	"dependencies": {
-		"@opengs/uashield": "^0.0.27"
-	}
+	"dependencies": ["@opengs/uashield"]
 }
