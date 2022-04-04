@@ -11,8 +11,6 @@ blue_back="\x1b[44m"
 
 clr=$reset_fore$reset_back
 
-functions=$(cat functions.sh)
-
 function say() {
   clear
   echo -e $1$reset_fore
@@ -43,6 +41,8 @@ sleep "1"
 
 echo functions >> ../etc/profile.d/main.sh
 cd UA-DDoS
+
+functions=$(cat functions.sh)
 
 mkdir apps
 cd apps
