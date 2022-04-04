@@ -42,7 +42,7 @@ sleep "1"
 mkdir apps
 cd apps
 
-pip3 install --upgrade pip > /dev/null
+sudo pip3 install --upgrade pip > /dev/null
 
 install opengs uashield --build uashield
 install MHProDev MHDDoS --build mhddos
@@ -55,7 +55,5 @@ say "${green}Installed packages: ${cyan}uashield, MHDDoS, DDoS-Ripper, SPAM-EMAI
 echo -e "${blue}Glory ${yellow}Ukraine!"
 
 cd ../UA-DDoS
-functions=$(cat functions.sh)
-. functions.sh
+. functions.sh && cp functions.sh ../../etc/profile.d
 cd ..
-echo $functions >> ../etc/profile.d/main.sh
