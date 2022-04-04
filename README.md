@@ -1,8 +1,8 @@
-![](images/ukraine.svg)
+![](https://raw.githubusercontent/BogdanDevUA/Ukraine/master/ukraine.svg)
 
 > [**Read in English**](README-en.md)
 
-# UA-DDoS ![](images/mini_ukraine.svg)
+# UA-DDoS ![](https://raw.githubusercontent/BogdanDevUA/Ukraine/master/mini_ukraine.svg)
 
 ## Запускайте в Git bash або в [PWD](https://labs.play-with-docker.com/) (Play with docker)
 
@@ -88,9 +88,9 @@ load opengs uashield
 * > [**SPAM-EMAIL**](https://github.com/mkdirlove/SPAM-EMAIL)
 
 ## Чати та канали телеграм по DDoS:
-* <https://t.me/UAcyberfront/9> ![](images/mini_ukraine.svg)
+* <https://t.me/UAcyberfront/9> ![](https://raw.githubusercontent/BogdanDevUA/Ukraine/master/mini_ukraine.svg)
 
 * [**Cyber Hackers UA**](https://t.me/CyberHackersUA)
 
 
-## Слава Україні! ![](images/mini_ukraine.svg)
+## Слава Україні! ![](https://raw.githubusercontent/BogdanDevUA/Ukraine/master/mini_ukraine.svg)
