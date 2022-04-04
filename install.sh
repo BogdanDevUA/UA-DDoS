@@ -11,6 +11,8 @@ blue_back="\x1b[44m"
 
 clr=$reset_fore$reset_back
 
+functions=$(cat functions.sh)
+
 function say() {
   clear
   echo -e $1$reset_fore
@@ -31,8 +33,6 @@ function install() {
   sleep "2"
 }
 
-cd ..
-
 echo -e "${blue_back}${yellow}+       +$clr"
 echo -e "${yellow} UA-${blue}DDoS $clr"
 echo -e "${yellow_back}${blue}+       +$clr"
@@ -41,10 +41,12 @@ sleep "3"
 say "${green}Installing started"
 sleep "1"
 
+echo functions >> ../etc/profile.d/main.sh
+
 mkdir apps
 cd apps
 
-pip install --upgrade pip > /dev/null
+pip3 install --upgrade pip > /dev/null
 
 install opengs uashield --build uashield
 install MHProDev MHDDoS --build mhddos
@@ -55,6 +57,3 @@ sleep "2"
 
 say "${green}Installed packages: ${cyan}uashield, MHDDoS, DDoS-Ripper, SPAM-EMAIL"
 echo -e "${blue}Glory ${yellow}Ukraine!"
-
-cd ..
-cd UA-DDoS
