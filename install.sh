@@ -52,7 +52,7 @@ install mkdirlove SPAM-EMAIL
 sleep "2"
 
 say "${green}Installed packages: ${cyan}uashield, MHDDoS, DDoS-Ripper, SPAM-EMAIL"
-echo -e "${blue}Glory ${yellow}Ukraine!"
+echo -e "${blue}Glory ${yellow}Ukraine!$reset_fore"
 
 cd ../UA-DDoS
 . functions.sh && cp functions.sh ../../etc/profile.d
