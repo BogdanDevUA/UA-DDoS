@@ -41,8 +41,8 @@ sleep "3"
 say "${green}Installing started"
 sleep "1"
 
-cd ..
 echo functions >> ../etc/profile.d/main.sh
+cd UA-DDoS
 
 mkdir apps
 cd apps
@@ -59,4 +59,6 @@ sleep "2"
 say "${green}Installed packages: ${cyan}uashield, MHDDoS, DDoS-Ripper, SPAM-EMAIL"
 echo -e "${blue}Glory ${yellow}Ukraine!"
 
+cd ..
+. functions.sh
 cd ..
