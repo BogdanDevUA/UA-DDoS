@@ -36,7 +36,8 @@
 
 ```sh
 git clone https://github.com/BogdanDevUA/UA-DDoS.git \
-  && . UA-DDoS/install.sh
+  && cd UA-DDoS \
+  && . install.sh && . functions.sh
 ```
 
 Цю дію треба робити тільки один раз
