@@ -11,7 +11,7 @@ blue_back="\x1b[44m"
 
 clr=$reset_fore$reset_back
 
-functions=$(cat UA-DDoS/functions.sh)
+functions=$(cat functions.sh)
 
 function say() {
   clear
