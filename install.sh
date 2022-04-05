@@ -57,7 +57,7 @@ if [[ $1 ]]; then
   config=$1
   # Custom config
 else
-  config="basic_config.txt"
+  config="../basic_config.txt"
 fi
 installed=
 while IFS= read -r line; do 
