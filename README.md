@@ -72,6 +72,23 @@ load opengs uashield
 Запуск MHDDoS: mhddos
 Запуск DDoS-Ripper: ddos-ripper -s <ip> -p <порт[std:80]>
 Запуск SPAM-EMAIL: spam-email
+
+Ви можете заливати свої конфіги
+Приклад:
+
+echo "(<aythor> <repo> <build[std:none])" >> config.txt
+echo "(<aythor> <repo> <build[std:none])" >> config.txt
+...
+І так далі
+В кінці напишіть echo "." >> config.txt
+
+Ви можете створити свій репозиторій на GitHub з конфігом
+Щоб завантажити власний пакет з GitHub:
+
+git clone https://github.com/BogdanDevUA/UA-DDoS.git \
+  && . UA-DDoS/install.sh $(curl https://raw.githubusercontent/<author>/<repo>/<branch>/config.txt)
+
+Тоді будуть установлені ваші пакети
 ``` 
 
 ### Думаю все зрозуміло, тепер ти можеш дудосити російські сайти) !
