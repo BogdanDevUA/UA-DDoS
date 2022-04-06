@@ -30,7 +30,7 @@ function install() {
   if [[ ! -f $2 ]]; then
     say "${cyan}Installing $2 ..."
     load $1 $2
-    if [[ $3 ]] && test -s Dockerfile; then
+    if [[ $3 ]] && test -s "$2/Dockerfile"; then
       # Building
       docker build $2 -t $3
     else
@@ -82,7 +82,7 @@ echo -e "${blue}Glory ${yellow}Ukraine!$reset_fore"
 cd ../UA-DDoS
 . functions.sh
 
-if [[ $OS == "Linux" ]]; then
+if [[ $(uname) == "Linux" ]]; then
   cp functions.sh ../../etc/profile.d
   # Integration autorun file for functions
 else
