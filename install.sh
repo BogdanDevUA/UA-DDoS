@@ -10,6 +10,7 @@ yellow="\x1b[33m"
 blue="\x1b[34m"
 yellow_back="\x1b[43m"
 blue_back="\x1b[44m"
+red="\x1b[31m"
 
 clr=$reset_fore$reset_back
 # =========================
@@ -26,20 +27,23 @@ function load() {
 }
 
 function install() {
-  say "${cyan}Installing $2 ..."
-  load $1 $2
-  if [[ $3 ]]; then
-    # Building
-    docker build $2 -t $3
+  if [[ ! -f $2 ]]; then
+    say "${cyan}Installing $2 ..."
+    load $1 $2
+    if [[ $3 ]] && test -s Dockerfile; then
+      # Building
+      docker build $2 -t $3
+    else
+      echo -e "${red}Dockerfile is empty! $reset_fore"
+    fi
+    say "${green}$2 installed!"
+    sleep "2"
   fi
-  say "${green}$2 installed!"
-  sleep "2"
 }
 
 # Ukraine
-echo -e "${blue_back}${yellow}+       +$clr"
-echo -e "${yellow} UA-${blue}DDoS $clr"
-echo -e "${yellow_back}${blue}+       +$clr"
+echo -e "$blue_back$yellow   UA   $clr"
+echo -e "$yellow_back$blue  DDoS  $clr"
 sleep "3"
 
 say "${green}Installing started"
@@ -76,6 +80,13 @@ echo -e "${blue}Glory ${yellow}Ukraine!$reset_fore"
 # Ending
 
 cd ../UA-DDoS
-. functions.sh && cp functions.sh ../../etc/profile.d
-# Integration autorun file for functions
+. functions.sh
+
+if [[ $OS == "Linux" ]]; then
+  cp functions.sh ../../etc/profile.d
+  # Integration autorun file for functions
+else
+  echo -e "${red}Your OS is not ${yellow}Linux! \n${red}Autorun not supported! $reset_fore"
+fi
+
 cd ..
