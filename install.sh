@@ -54,10 +54,10 @@ sudo pip3 install --upgrade pip > /dev/null
 # Upgrading pip in /dev/nul for without logs
 
 if [[ $1 ]]; then
-  config=$1
+  config=../$1
   # Custom config
 else
-  config="UA-DDoS/basic_config.txt"
+  config="../UA-DDoS/basic_config.txt"
 fi
 installed=
 while IFS= read -r line; do 
