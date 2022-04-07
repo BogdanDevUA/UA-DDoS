@@ -4,6 +4,8 @@
 
 # UA-DDoS ![](https://raw.githubusercontent.com/BogdanDevUA/Ukraine/main/mini_ukraine.svg)
 
+![GitHub](https://img.shields.io/github/license/BogdanDevUA/UA-DDoS)
+
 ## Запускайте в Git bash або в [PWD](https://labs.play-with-docker.com/) (Play with docker)
 
 Спочатку зареєструйтесь в **PWD**
