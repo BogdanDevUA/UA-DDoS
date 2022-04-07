@@ -32,7 +32,7 @@ function install() {
     load $1 $2
     if [[ $3 ]] && test -s "$2/Dockerfile"; then
       # Building
-      docker build $2 -t $3
+      sudo docker build $2 -t $3
     else
       echo -e "${red}Dockerfile is empty! $reset_fore"
     fi
@@ -97,7 +97,8 @@ echo -e "${blue}Glory ${yellow}Ukraine!$reset_fore"
 . $functions
 
 if [[ $(uname) == "Linux" ]]; then
-  cp $functions ../etc/profile.d
+  sudo cp $functions ../etc/profile.d
+  sudo cp ../UA-DDoS/main-functions.sh ../etc/profile.d
   # Integration autorun file for functions
 else
   echo -e "${red}Your OS is not ${yellow}Linux! \n${red}Autorun not supported! $reset_fore"

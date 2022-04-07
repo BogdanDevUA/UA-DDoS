@@ -1,8 +1,8 @@
 function uashield() {
-  docker run uashield $*
+  sudo docker run uashield $*
 }
 function mhddos() {
-  docker run mhddos $*
+  sudo docker run mhddos $*
 }
 function ddos-ripper() {
   cd apps/DDoS-Ripper
