@@ -57,11 +57,25 @@ cd apps
 sudo pip3 install --upgrade pip > /dev/null
 # Upgrading pip in /dev/nul for without logs
 
+pkgdir="../UA-DDoS/packages/"
+
 if [[ $1 ]]; then
-  config=../$1
-  # Custom config
+  case $1 in
+    spam)
+      config=${pkgdir}spam/config.txt
+      functions=${pkgdir}spam/functions.sh
+      ;;
+    *)
+      if [[ -f $1 ]]; then
+        config=../$1
+      else
+        echo "None package $1 :)"
+      fi
+      # Custom config
+  esac
 else
-  config="../UA-DDoS/basic_config.txt"
+  config="${pkgdir}standart/config.txt"
+  functions="${pkgdir}standart/functions.sh"
 fi
 installed=
 while IFS= read -r line; do 
@@ -79,11 +93,11 @@ say "${green}Installed packages: ${cyan}$installed"
 echo -e "${blue}Glory ${yellow}Ukraine!$reset_fore"
 # Ending
 
-cd ../UA-DDoS
-. functions.sh
+. ../UA-DDoS/main-functions.sh
+. $functions
 
 if [[ $(uname) == "Linux" ]]; then
-  cp functions.sh ../../etc/profile.d
+  cp $functions ../etc/profile.d
   # Integration autorun file for functions
 else
   echo -e "${red}Your OS is not ${yellow}Linux! \n${red}Autorun not supported! $reset_fore"

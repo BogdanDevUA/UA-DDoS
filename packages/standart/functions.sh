@@ -11,6 +11,3 @@ function ddos-ripper() {
 spam-email() {
   python3 apps/SPAM-EMAIL/spam-email-v2.py
 }
-function load() {
-  git clone https://github.com/$1/$2.git
-}
